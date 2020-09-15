@@ -1,6 +1,7 @@
+import java.util.Scanner;
 /**
- *
- * @author 
+ * determine if a number the user inputs is even or odd
+ * @author Gavin
  */
 public class Main {
 
@@ -9,7 +10,27 @@ public class Main {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    // TODO code application logic here
+    // Create a scanner for user input
+    Scanner input = new Scanner(System.in);
+    
+    // prompt the user for a number
+    System.out.print("Please enter a number:");
+
+    // get the number from the user
+    int number = input.nextInt();
+
+    int EVEN_NUMBER = 0;
+
+    int remainder = number%2;
+    
+    // determine if the number is even or odd    
+    if(remainder==EVEN_NUMBER){
+      // tell them if the number is even
+      System.out.print(number + "is an even number");
+    } else {
+      // or if the number is odd
+      System.out.println(number + "is an odd number"); 
+    }
     
   }
 }
